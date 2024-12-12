@@ -1,0 +1,9 @@
+{% if latest_event_list %}
+<ul>
+    {% for event in latest_event_list %}
+    <li>投票</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>イベントない</p>
+{% endif %}
