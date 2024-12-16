@@ -24,4 +24,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("todo/", include("todo.urls")),
     path("todo2/", include("todo2.urls")),
+    path("todo3/", include("todo3.urls")),
+    path("event2/", include("event2.urls")),
 ]
