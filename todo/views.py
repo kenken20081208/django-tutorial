@@ -16,7 +16,7 @@ def edit(request):
 
 def register(request):
     new_todo = models.Todo()
-    new_todo.title = "やああああ"
+    new_todo.title = "aaaaaa"
     new_todo.save()
 
     all_todo = models.Todo.objects.all()
