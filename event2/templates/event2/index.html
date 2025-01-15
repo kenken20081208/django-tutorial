@@ -1,10 +1,10 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="stylesheet" href="{% static 'event2/style.css' %}">
 <form action="{% url 'event2:pepe' %}" method="post">
     {% csrf_token %}
     <input type="text" name="title">
-    <input type="submit" value="登録">
+    <input class="s" type="submit" value="登録">
 </form>
 {% for event in all_event2 %}
-{{ event.title }}
+<p>{{ event.title }}</p>
 {% endfor %}
