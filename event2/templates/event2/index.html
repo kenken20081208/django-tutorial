@@ -1,12 +1,11 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'event2/style.css' %}">
 <!-- ボタンが押されるとviewsのpepeに飛ぶ -->
+ <p>スケジュール管理<p>
 <form action="{% url 'event2:pepe' %}" method="post">
     {% csrf_token %}
     <input type="text" name="title">
+    <input type="text" name="date">
     <input class="s" type="submit" value="登録">
 </form>
 <!-- 送られてきたデータをfor文で表示する -->
-{% for event in all_event2 %}
-<p>{{ event.title }}</p>
-{% endfor %}

@@ -3,3 +3,9 @@ mysql.server start
 mysql -u root
 
 python manage.py runserver
+
+board
+
+show databases;
+
+GuessResult.objects.all().delete()      
