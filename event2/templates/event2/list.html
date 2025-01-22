@@ -1,13 +1,22 @@
 {% for event in all_event2 %}
 
-    <p>{{ event.title }} {{event.date}}</p>
-     <form action="{% url 'event2:delete' event2.id %}" method="post"> {% endcomment %}
+    <p>{{ event.title }} {{event.date}} {{event.id}}</p>
+    <form action="{% url 'event2:delete' event.id %}" method="post">
         {% csrf_token %}
-        <input type="submit" value="削除"> 
+        <input type="submit" value="削除">
 {% endfor %} 
+
+{% comment %} {% for event in all_event2 %}
+    <p>{{ event.title }} {{ event.date }}</p>
+    <form action="{% url 'event2:delete' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="削除">
+    </form>
+{% endfor %} {% endcomment %}
 
 
 <form action="{% url 'event2:index' %}" method="post">
     {% csrf_token %}
     <input type="submit" value="戻る">
 </form>
+
